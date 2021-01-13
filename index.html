@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Our Custom CSS -->
+
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <!-- <div class="sidebar-header">
+                <h3>Bootstrap Sidebar</h3>
+            </div> -->
+
+            <div class="media media-avatar p-3">
+                <img src="assets/img/avatar.jpg" alt="Avatar" height="70" class="mr-2 rounded-circle">
+                <!-- mr-2 -->
+                <div class="media-body">
+                    <p class="h6 m-0">GUSTAVO ALVES DA SILVA</p>
+                    <!-- h6 -->
+                    <small>Administrador</small>
+                </div>
+                <!-- media-body -->
+            </div>
+            <!-- media -->
+
+            <ul class="list-unstyled components">
+                <!-- <p>Dummy Heading</p> -->
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Menu
+                        Principal</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Cadastrar Slides</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <!-- <a href="#">Gestão</a> -->
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Financeiro</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Clientes</a>
+                        </li>
+                        <li>
+                            <a href="#">Contratos a Receber</a>
+                        </li>
+                        <li>
+                            <a href="#">Tributo (DAS)</a>
+                        </li>
+                        <li>
+                            <a href="#">Pensão</a>
+                        </li>
+                        <li>
+                            <a href="#">Bancos</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <!-- <a href="#">Gestão</a> -->
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Boletos</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li>
+                            <a href="#">Cadastro de Boletos</a>
+                        </li>
+                        <li>
+                            <a href="#">Imprimir</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <!-- <a href="#">Gestão</a> -->
+                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">PDV</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                        <li>
+                            <a href="#">Caixa</a>
+                        </li>
+                        <li>
+                            <a href="#">Relatórios</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <!-- <a href="#">Gestão</a> -->
+                    <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Contas
+                        a Pagar</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu4">
+                        <li>
+                            <a href="#">Cadastrar Categorias</a>
+                        </li>
+                        <li>
+                            <a href="#">Gerenciar Categorias</a>
+                        </li>
+                        <li>
+                            <a href="#">Cadastrar Notícias</a>
+                        </li>
+                        <li>
+                            <a href="#">Gerenciar Notícias</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <!-- <a href="#">Gestão</a> -->
+                    <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Sistema</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu5">
+                        <li>
+                            <a href="#">Usuários</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                </li>
+                <li>
+                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                </li>
+            </ul> -->
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#"><i class="fas fa-eye"></i> Ver Site</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fas fa-home"></i> Página Inicial</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fas fa-window-close"></i> Sair</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container">
+                <form>
+                    <div class="form-row">
+                        <div class="col form-group">
+                            <label for="first">Primeiro nome</label>
+                            <input type="text" class="form-control" id="first">
+                            <!-- form-control -->
+                        </div>
+                        <!-- col -->
+                        <div class="col form-group">
+                            <label for="last">Último nome</label>
+                            <input type="text" class="form-control" id="last">
+                            <!-- form-control -->
+                        </div>
+                        <!-- col -->
+                    </div>
+                    <!-- form-row -->
+
+                    <hr>
+
+                    <div class="form-row">
+                        <div class="col-sm-3 form-group">
+                            <label for="zipcode">CEP</label>
+                            <input type="text" class="form-control" id="zipcode">
+                            <!-- form-control -->
+                        </div>
+                        <!-- col-sm-3 -->
+                    </div>
+                    <!-- form-row -->
+
+                    <div class="form-row">
+                        <div class="col-sm-9 form-group">
+                            <label for="address">Endereço</label>
+                            <input type="text" class="form-control" id="endereco">
+                            <!-- form-control -->
+                        </div>
+                        <!-- col-sm -->
+                        <div class="col-sm-3 form-group">
+                            <label for="number">Número</label>
+                            <input type="number" class="form-control" id="number">
+                            <!-- form-control -->
+                        </div>
+                        <!-- col-sm -->
+                    </div>
+                    <!-- form-row -->
+
+                    <div class="form-row">
+                        <div class="col-sm-6">
+                            <label for="complement">Complemento</label>
+                            <input type="text" class="form-control" id="complement">
+                            <!-- form-control -->
+                        </div>
+                        <!-- col-sm-6 -->
+                        <div class="col-sm-6">
+                            <label for="district">Bairro</label>
+                            <input type="text" class="form-control" id="district">
+                            <!-- form-control -->
+                        </div>
+                        <!-- col-sm-6 -->
+                    </div>
+                    <!-- form-row -->
+
+                    <div class="form-row">
+                        <div class="col-sm-4">
+                            <label for="city">Cidade</label>
+                            <input type="text" class="form-control" id="city">
+                            <!-- form-control -->
+                        </div>
+                        <!-- col-sm-4 -->
+                        <div class="col-6 col-sm-4">
+                            <label for="state">Estado</label>
+                            <input type="text" class="form-control" id="state">
+                            <!-- form-control -->
+                        </div>
+                        <!-- col-6 -->
+                        <div class="col-6 col-sm-4">
+                            <label for="country">País</label>
+                            <input type="text" class="form-control" id="country">
+                            <!-- form-control -->
+                        </div>
+                        <!-- col-6 -->
+                    </div>
+                    <!-- form-row -->
+                    <br>
+                    <div class="form-row">
+                        <button type="submit" class="btn btn-primary btn-block">Salvar</button>
+                        <!-- btn -->
+                    </div>
+                    <!-- form-row -->
+                </form>
+            </div>
+            <!-- container -->
+
+        </div>
+
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <!-- Popper.JS -->
+        <script src="node_modules/popper.js/dist/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                    $(this).toggleClass('active');
+                });
+            });
+        </script>
+</body>
+
+</html>
